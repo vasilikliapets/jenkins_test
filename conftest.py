@@ -10,8 +10,8 @@ def browser():
     options.add_argument('--disable-gpu')
     options.add_argument("--remote-debugin-port=9222")
     options.add_argument("--screen-size=1200x800")
-    # driver = webdriver.Chrome(chrome_options=chrome_options)
-    driver = webdriver.Remote(desired_capabilities=options.to_capabilities())
+    driver = webdriver.Chrome(options=options)
+    # driver = webdriver.Remote(desired_capabilities=options.to_capabilities())
 
     # driver = webdriver.Chrome()
     driver.maximize_window()
